@@ -14,7 +14,7 @@ on:
         type: string
 jobs:
   deploy:
-    name: check-pull-request
+    name: deploy
     runs-on: linux-platform-eng
     steps:
      - name: deploy
