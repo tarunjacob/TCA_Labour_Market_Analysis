@@ -1,0 +1,15 @@
+name: set-version
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+jobs:
+  set-version:
+   name: Set Version
+   runs-on: ubuntu-latest
+   steps:
+     - name: Set Version 
+       run: echo "Setting version to 0.1.0"
