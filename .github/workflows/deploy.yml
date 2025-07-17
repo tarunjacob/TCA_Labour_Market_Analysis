@@ -8,10 +8,6 @@ on:
         description: 'The environment to deploy to'
         required: false
         type: string
-      version:
-        description: 'The version to deploy'
-        required: true
-        type: string
 jobs:
   deploy:
     name: deploy
@@ -25,6 +21,6 @@ jobs:
      - name: ls
        run: ls -la
      - name: deploy
-       run: echo "Deploying ${{ inputs.environment }} on version ${{ GITHUB_REF_NAME }}"
+       run: echo "Deploying ${{ inputs.environment }} on version ${{ github.ref_name }}"
        
 
