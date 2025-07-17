@@ -8,6 +8,9 @@ on:
         description: 'The environment to deploy to'
         required: false
         type: string
+  push:
+    tags:
+      - '*'
 jobs:
   deploy:
     name: deploy
@@ -21,6 +24,6 @@ jobs:
      - name: ls
        run: ls -la
      - name: deploy
-       run: echo "Deploying ${{ inputs.environment }} on version ${{ github.ref_name }}"
+       run: echo "Deploying ${{ inputs.environment || 'development' }} on version ${{ github.ref_name }}"
        
 
