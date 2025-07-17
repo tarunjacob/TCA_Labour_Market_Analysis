@@ -2,7 +2,7 @@ name: deploy
 
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       environment:
         description: 'The environment to deploy to'
