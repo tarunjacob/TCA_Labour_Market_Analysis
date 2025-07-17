@@ -15,7 +15,7 @@ on:
 jobs:
   deploy:
     name: deploy
-    runs-on: linux-platform-eng
+    runs-on: ubuntu-latest
     steps:
      - name: deploy
        run: echo "Deploying ${{ inputs.environment }} on version ${{ inputs.version }}"
