@@ -1,0 +1,13 @@
+name: check-pull-request
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    
+jobs:
+  check-pull-request:
+    name: check-pull-request
+    runs-on: ubuntu-latest
+    steps:
+     - name: Check Pull Request
+       run: echo "Running Check Pull Request"
+    
