@@ -1,0 +1,30 @@
+name: deploy
+
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'The environment to deploy to'
+        required: false
+        type: string
+      version:
+        description: 'The version to deploy'
+        required: true
+        type: string
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+     - name: deploy
+       run: echo "Deploying ${{ inputs.environment }} on version ${{ inputs.version }}"
+     - name: Checkout
+       uses: actions/checkout@v4
+       with:
+         fetch-tags: true
+         fetch-depth: 5
+     - name: ls
+       run: ls -la
+       
+
