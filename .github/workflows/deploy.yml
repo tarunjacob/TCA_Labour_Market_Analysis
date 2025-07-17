@@ -19,5 +19,12 @@ jobs:
     steps:
      - name: deploy
        run: echo "Deploying ${{ inputs.environment }} on version ${{ inputs.version }}"
+     - name: Checkout
+       uses: actions/checkout@v4
+       with:
+         fetch-tags: true
+         fetch-depth: 5
+     - name: ls
+       run: ls -la
        
 
