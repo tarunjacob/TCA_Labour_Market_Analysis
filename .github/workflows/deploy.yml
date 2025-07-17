@@ -1,0 +1,23 @@
+name: deploy
+
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: 'The environment to deploy to'
+        required: false
+        type: string
+      version:
+        description: 'The version to deploy'
+        required: true
+        type: string
+jobs:
+  check-pull-request:
+    name: check-pull-request
+    runs-on: linux-platform-eng
+    steps:
+     - name: deploy
+       run: echo "Deploying ${{ inputs.environment }} on version ${{ inputs.version }}"
+       
+
