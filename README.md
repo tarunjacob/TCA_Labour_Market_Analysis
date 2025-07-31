@@ -9,7 +9,7 @@ current state of the Australian labour market that is relevant to the tech secto
 
 The code should perform all of the steps required in the analysis: it should download the data, clean it,
 extract key insights and generate a representation of the key insight in either a table or chart.
-This can take the form of a script with outputs presented in a markdown document or PDF, or a notebook
+This can take the form of a script with outn lmb l l l puts presented in a markdown document or PDF, or a notebook
 that can be viewed in the browser.
 
 This analysis task will be assessed on the quality of insight, not the quantity of analysis. It is better to
