@@ -5,7 +5,7 @@ task for the data analyst at the Tech Council is to analyse labour market data t
 present insights on employment in the tech sector.
 
 Using publicly available datasets and code written in either Python or R, construct a short analysis of the
-current state of the Australian labour market that is relevant to the tech sector.
+current state of the Australian labour market thafg,rlgmdflgmeromgfet is relevant to the tech sector.
 
 The code should perform all of the steps required in the analysis: it should download the data, clean it,
 extract key insights and generate a representation of the key insight in either a table or chart.
