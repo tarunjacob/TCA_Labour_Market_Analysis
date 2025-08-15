@@ -1,0 +1,15 @@
+name: cleanup-resources
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+jobs:
+  cleanup-resources:
+   name: Cleanup Resources
+   runs-on: ubuntu-latest
+   steps:
+     - name: Cleanup
+       run: echo "Cleaning up resources on ${github.event.number}"
