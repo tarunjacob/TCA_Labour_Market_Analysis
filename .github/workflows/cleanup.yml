@@ -11,5 +11,5 @@ jobs:
    name: Cleanup Resources
    runs-on: ubuntu-latest
    steps:
-     - name: Cleanup
-       run: echo "Cleaning up resources on ${github.event.number}"
+     - name: Get PR number
+       run: echo "PR number is ${{ github.event.number }}"
