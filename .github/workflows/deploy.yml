@@ -11,9 +11,9 @@ on:
         options:
           - development
           - production
-  push:
-    tags:
-      - '*'
+      version:
+        description: 'The required version'
+        type: string
 jobs:
   deploy:
     name: deploy
@@ -23,8 +23,8 @@ jobs:
      - name: Checkout
        uses: actions/checkout@v4
        with:
-         fetch-tags: true
-         fetch-depth: 0
+         ref: ${input.version}
+         
      - name: ls
        run: ls -la
      - name: deploy
