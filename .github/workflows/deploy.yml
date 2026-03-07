@@ -25,9 +25,7 @@ jobs:
        with:
          ref: ${input.version}
          
-     - name: ls
-       run: ls -la
-     - name: deploy
-       run: echo "Deploying ${{ inputs.environment || 'development' }} on version ${{ github.ref_name }}"
+     - name: cat
+       run: cat ./github/workflows/deploy.yml
        
 
