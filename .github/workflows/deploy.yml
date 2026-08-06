@@ -30,6 +30,22 @@ jobs:
 
      - name: Create data
        run: echo ${{ inputs.environment || 'development' }} > env_name.txt
+
+     - name: Trigger Workflow B with Inputs
+       uses: actions/github-script@v7
+       with:
+          github-token: 
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,                 // Change this if Workflow B is in a different repo
+              workflow_id: 'workflow_b.yml',           // The exact file name of Workflow B
+              ref: 'main',                             // The branch to run Workflow B on
+              inputs: {
+                environment: 'production',             // Passing inputs directly
+                version: 'v2.4.0'
+              }
+            });
            
        
 
