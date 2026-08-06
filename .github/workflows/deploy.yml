@@ -27,5 +27,9 @@ jobs:
          
      - name: cat
        run: cat ./github/workflows/deploy.yml
+
+     - name: Create data
+       run: echo ${{ inputs.environment || 'development' }} > env_name.txt
+           
        
 
