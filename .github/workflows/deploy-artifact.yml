@@ -1,0 +1,14 @@
+name: deploy-artifact
+on:
+  workflow_run:
+    workflows: ["deploy"]
+    types: [completed]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read the inputs
+        run: |
+          ENV_VALUE=$(cat env_name.txt)
+          echo "The passed environment is $ENV_VALUE"
